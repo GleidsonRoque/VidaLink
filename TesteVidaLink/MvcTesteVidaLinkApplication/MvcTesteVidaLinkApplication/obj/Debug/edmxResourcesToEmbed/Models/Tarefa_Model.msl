@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TesteVidaLinkModelStoreContainer" CdmEntityContainer="TesteVidaLinkEntities">
+    <EntitySetMapping Name="Tarefa">
+      <EntityTypeMapping TypeName="TesteVidaLinkModel.Tarefa">
+        <MappingFragment StoreEntitySet="Tarefa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nm_Titulo" ColumnName="nm_Titulo" />
+          <ScalarProperty Name="nm_descricao" ColumnName="nm_descricao" />
+          <ScalarProperty Name="dt_Execucao" ColumnName="dt_Execucao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

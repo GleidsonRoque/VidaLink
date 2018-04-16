@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TesteVidaLinkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tarefa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_Titulo" Type="varchar" MaxLength="40" />
+    <Property Name="nm_descricao" Type="varchar" MaxLength="60" />
+    <Property Name="dt_Execucao" Type="date" />
+  </EntityType>
+  <EntityContainer Name="TesteVidaLinkModelStoreContainer">
+    <EntitySet Name="Tarefa" EntityType="Self.Tarefa" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

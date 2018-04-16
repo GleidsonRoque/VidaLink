@@ -1,0 +1,7 @@
+Para Rodar a Página siga os seguintes Passos:
+
+1 - Rodar o Script: Scrip_Banco_VidaLink para criar o Banco;
+
+2 - Alterar a conexão String da Página para o seu banco local;
+
+3 - No console do Nuget inserir o comando: Update-Package -reinstall

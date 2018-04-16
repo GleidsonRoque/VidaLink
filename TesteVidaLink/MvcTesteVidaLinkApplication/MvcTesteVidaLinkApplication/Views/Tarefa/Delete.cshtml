@@ -1,0 +1,45 @@
+﻿@model MvcTesteVidaLinkApplication.Models.Tarefa
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div style="background:whitesmoke">
+    <div class="jumbotron">
+        <h2 style="color:steelblue">Confirmação de Exclusão de Tarefa</h2>
+    </div>
+    <div class="container">
+        <p><b>Você está prestes a excluir uma tarefa, se você continuar não será possível desfazer, deseja realmente excluir essa tarefa?</b></p>
+        <fieldset>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.nm_Titulo)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.nm_Titulo)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.nm_descricao)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.nm_descricao)
+            </div>
+
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.dt_Execucao)
+            </div>
+            <div class="display-field">
+                @Html.DisplayFor(model => model.dt_Execucao)
+            </div>
+        </fieldset>
+        <div style="margin-top:30px" />
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <p>
+                <input type="submit" value="Confirma Exclusão" class="btn btn-danger" /> 
+                @Html.ActionLink("Voltar", "Index", null, new { @class = "btn btn-secondary" })
+            </p>
+        }
+    </div>
+</div>

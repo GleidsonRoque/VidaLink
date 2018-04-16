@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcTesteVidaLinkApplication.Models.Tarefa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div style="background:whitesmoke">
+    <div class="jumbotron">
+        <h2 style="color:steelblue"> Página Principal</h2>
+        <p>Pagina de teste de conhecimentos em MVC</p>
+    </div>    
+    <div class="container">
+        <div style="margin-bottom:30px">
+            <h6 style="color:steelblue">Localizar</h6>
+            @using (Html.BeginForm())
+            {
+                @Html.TextBox("Localizar") <input type="submit" name="submit" value="Localizar" class="btn btn-outline-info" formmethod="post" />
+            }
+            
+            
+        </div>
+        <p>
+            @Html.ActionLink("Inserir Novo Registro", "Create", null, new { @class = "btn btn-primary" })
+        </p>
+        <table>
+            <tr>
+                <th width="30%" >
+                    @Html.DisplayNameFor(model => model.nm_Titulo)
+                </th>
+                <th width="30%">
+                    @Html.DisplayNameFor(model => model.nm_descricao)
+                </th>
+                <th width="25%">
+                    @Html.DisplayNameFor(model => model.dt_Execucao)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nm_Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nm_descricao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dt_Execucao)
+                    </td>
+                    <td width="20%">
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-outline-primary"  })                         
+                        @Html.ActionLink("Excluir", "Delete", new { id = item.Id }, new { @class = "btn btn-outline-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

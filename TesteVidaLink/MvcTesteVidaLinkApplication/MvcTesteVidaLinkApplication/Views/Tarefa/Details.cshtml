@@ -1,0 +1,36 @@
+﻿@model MvcTesteVidaLinkApplication.Models.Tarefa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Tarefa</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nm_Titulo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nm_Titulo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nm_descricao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nm_descricao)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.dt_Execucao)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.dt_Execucao)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
